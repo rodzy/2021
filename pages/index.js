@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
+import utilStyles from "../styles/utils.module.css";
+import { getSortedPostsData } from "../lib/posts";
+import Link from "next/link";
+import Date from "../components/date";
 
 export default function Home({ allPostsData }) {
   return (
@@ -12,10 +12,21 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
         <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          I'm a self tought modern web developer, currently doing freelance work
+          and focusing on getting a gig at a great company that highly values
+          professionals.
+        </p>
+        <p>
+          As a side note I'm spending most of free time doing Open Source
+          contributions and just started my new big side project{" "}
+          <small>(Private info 👀)</small>.
+        </p>
+        <p>
+          If you are intrested on any of my work checkout my{" "}
+          <a href="https://github.com/rodzy">GitHub</a>, I'm very active on
+          there and I got some public and very intresting projects to check out
+          or even contribute to them.
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -35,14 +46,14 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
