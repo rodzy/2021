@@ -6,13 +6,39 @@
 
 .header {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 .headerImage {
   width: 6rem;
   height: 6rem;
+}
+
+.headingMain{
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.headingSecond{
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color:#8d8d8d;
+
+}
+
+.headingLgLayout {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+  padding-left: 1rem;
 }
 
 .headerHomeImage {
@@ -22,4 +48,14 @@
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+
+@media (max-width:700px){
+  .header{
+    flex-direction: column;
+  }
+  .headingMain,.headingSecond,.headingLgLayout{
+    padding: 0;
+  }
 }
