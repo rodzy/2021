@@ -11,74 +11,74 @@ export const siteTitle = `Rodzy`;
 export default function Layout({ children, home, blog }) {
   return (
     <>
-      <TheHeader/>
-      <div className={styles.container}>
-        <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="My personal test blog usign Next.js"
-          />
-          <meta
-            property="og:image"
-            content={`https://og-image.now.sh/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
-        </Head>
-        <header className={styles.header}>
-          {home ? (
-            <>
-              <img
-                src="/images/49137701.jpg"
-                className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                alt={name}
-              />
-              <div>
-                <h1 className={styles.headingMain}>{name}</h1>
-                <h2 className={styles.headingSecond}>{title}</h2>
-              </div>
-            </>
-          ) : (
-            <>
-              <Link href="/">
-                <a>
-                  <img
-                    src="/images/49137701.jpg"
-                    className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                    alt={name}
-                  />
-                </a>
+        <TheHeader />
+        <div className={styles.container}>
+          <Head>
+            <link rel="icon" href="/favicon.ico" />
+            <meta
+              name="description"
+              content="My personal test blog usign Next.js"
+            />
+            <meta
+              property="og:image"
+              content={`https://og-image.now.sh/${encodeURI(
+                siteTitle
+              )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+            />
+            <meta name="og:title" content={siteTitle} />
+            <meta name="twitter:card" content="summary_large_image" />
+          </Head>
+          <header className={styles.header}>
+            {home ? (
+              <>
+                <img
+                  src="/images/49137701.jpg"
+                  className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                  alt={name}
+                />
+                <div>
+                  <h1 className={styles.headingMain}>{name}</h1>
+                  <h2 className={styles.headingSecond}>{title}</h2>
+                </div>
+              </>
+            ) : (
+              <>
+                <Link href="/">
+                  <a>
+                    <img
+                      src="/images/49137701.jpg"
+                      className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                      alt={name}
+                    />
+                  </a>
+                </Link>
+                <div>
+                  <h1 className={styles.headingLgLayout}>
+                    <Link href="/">
+                      <a className={utilStyles.colorInherit}>{name}</a>
+                    </Link>
+                  </h1>
+                  <h2 className={styles.headingSecond}>{title}</h2>
+                </div>
+              </>
+            )}
+          </header>
+          <main>{children}</main>
+          {!home && !blog && (
+            <div className={styles.backToHome}>
+              <Link href="/blog">
+                <a>← Back to blog</a>
               </Link>
-              <div>
-                <h1 className={styles.headingLgLayout}>
-                  <Link href="/">
-                    <a className={utilStyles.colorInherit}>{name}</a>
-                  </Link>
-                </h1>
-                <h2 className={styles.headingSecond}>{title}</h2>
-              </div>
-            </>
+            </div>
           )}
-        </header>
-        <main>{children}</main>
-        {!home && !blog && (
-          <div className={styles.backToHome}>
-            <Link href="/blog">
-              <a>← Back to blog</a>
-            </Link>
-          </div>
-        )}
-        {blog && (
-          <div className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        )}
-      </div>
+          {blog && (
+            <div className={styles.backToHome}>
+              <Link href="/">
+                <a>← Back to home</a>
+              </Link>
+            </div>
+          )}
+        </div>
     </>
   );
 }
