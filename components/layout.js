@@ -14,11 +14,6 @@ export default function Layout({ children, home, blog }) {
         <TheHeader />
         <div className={styles.container}>
           <Head>
-            <link rel="icon" href="/favicon.ico" />
-            <meta
-              name="description"
-              content="My personal test blog usign Next.js"
-            />
             <meta
               property="og:image"
               content={`https://og-image.now.sh/${encodeURI(

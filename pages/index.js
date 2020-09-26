@@ -18,6 +18,10 @@ export default function Home() {
     <>
       <Head>
         <title>{siteTitle}</title>
+        <meta
+          name="description"
+          content="Software Engineer in Costa Rica."
+        ></meta>
       </Head>
       <Layout home>
         <section className={utilStyles.headingMd}>
@@ -39,8 +43,8 @@ export default function Home() {
           <div className={utilStyles.buttonsContainer}>
             <button
               style={{
-                borderColor: "#673ab7",
-                color: "#673ab7",
+                borderColor: short ? "#673ab7" : "#adadad",
+                color: short ? "#673ab7" : "#8d8d8d",
               }}
               className={utilStyles.microbuttons}
               onClick={() => dispatch({ type: "Short" })}
@@ -49,8 +53,8 @@ export default function Home() {
             </button>
             <button
               style={{
-                borderColor: "#2196f3",
-                color: "#2196f3",
+                borderColor: long ? "#2196f3" : "#adadad",
+                color: long ? "#2196f3" : "#8d8d8d",
               }}
               className={utilStyles.microbuttons}
               onClick={() => dispatch({ type: "Long" })}
@@ -59,8 +63,8 @@ export default function Home() {
             </button>
             <button
               style={{
-                borderColor: "#EC407A",
-                color: "#880E4F",
+                borderColor: speaker ? "#EC407A" : "#adadad",
+                color: speaker ? "#880E4F" : "#8d8d8d",
               }}
               className={utilStyles.microbuttons}
               onClick={() => dispatch({ type: "Speaker" })}

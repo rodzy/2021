@@ -10,10 +10,23 @@ export default function Blog({ allPostsData }) {
     <>
       <Head>
         <title>Rodzy's blog</title>
+        <meta
+          name="description"
+          content="On this blog you will find all topics related to web development, modern applications architectural
+            patterns, tutorials and sometimes just my toughts about certain
+            technologies."
+        ></meta>
       </Head>
       <Layout blog>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>Blog</h2>
+          <h1 className={utilStyles.headingLg}>Rodzy's blog</h1>
+          <p>
+            On this blog you will find all topics related to web development (
+            <i>mostly frontend stuff</i>), modern applications architectural
+            patterns, tutorials and sometimes just my toughts about certain
+            technologies.
+          </p>
+          <h2>Check the latests posts down bellow</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
