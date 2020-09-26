@@ -1,25 +1,25 @@
 export default function MainReducer(state, action) {
     switch (action.type) {
-        case "Short":
+        case "Intro":
             return {
                 ...state,
-                short: true,
-                long: false,
-                speaker:false,
+                intro: true,
+                stack: false,
+                more:false,
             }
-        case "Long":
+        case "Stack":
             return {
                 ...state,
-                short: false,
-                long: true,
-                speaker:false,
+                intro: false,
+                stack: true,
+                more:false,
             }
-        case "Speaker":
+        case "More":
             return {
                 ...state,
-                short: false,
-                long: false,
-                speaker:true,
+                intro: false,
+                stack: false,
+                more:true,
             }
         default:
             break;
