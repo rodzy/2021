@@ -1,9 +1,19 @@
 import Head from "next/head";
+import { useReducer } from "react";
 import Layout, { siteTitle } from "../components/layout";
-import MicroButton from "../components/microbuttons";
+import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 
+const InitialState = {
+  short: true,
+  long: false,
+  speaker: false,
+};
+
 export default function Home() {
+  const [state, dispatch] = useReducer(MainReducer, InitialState);
+  const { short, long, speaker } = state;
+
   return (
     <>
       <Head>
@@ -27,26 +37,89 @@ export default function Home() {
             </a>
           </div>
           <div className={utilStyles.buttonsContainer}>
-            <MicroButton text="Short" color="#673AB7" borderColor="#673AB7"/>
-            <MicroButton text="Long" color="#880E4F" borderColor="#EC407A"/>
-            <MicroButton text="Speech" color="#2196f3" borderColor="#2196f3"/>
+            <button
+              style={{
+                borderColor: "#673ab7",
+                color: "#673ab7",
+              }}
+              className={utilStyles.microbuttons}
+              onClick={() => dispatch({ type: "Short" })}
+            >
+              Short
+            </button>
+            <button
+              style={{
+                borderColor: "#2196f3",
+                color: "#2196f3",
+              }}
+              className={utilStyles.microbuttons}
+              onClick={() => dispatch({ type: "Long" })}
+            >
+              Long
+            </button>
+            <button
+              style={{
+                borderColor: "#EC407A",
+                color: "#880E4F",
+              }}
+              className={utilStyles.microbuttons}
+              onClick={() => dispatch({ type: "Speaker" })}
+            >
+              Speech
+            </button>
           </div>
-          <p>
-            Hey there! I'm a self tought modern web developer, currently doing
-            freelance work and focusing on getting a gig at a great company that
-            highly values professionals.
-          </p>
-          <p>
-            As a side note I'm spending most of free time doing Open Source
-            contributions and just started my new big side project{" "}
-            <small>(Private info 👀)</small>.
-          </p>
-          <p>
-            If you are intrested on any of my work checkout my{" "}
-            <a href="https://github.com/rodzy">GitHub</a>, I'm very active on
-            there and I got some public and very intresting projects to check
-            out or even contribute to them.
-          </p>
+          {short && (
+            <>
+              <p>
+                Hey there! I'm a self tought modern web developer, currently
+                doing freelance work and focusing on getting a gig at a great
+                company that highly values professionals.
+              </p>
+              <p>
+                As a side note I'm spending most of free time doing Open Source
+                contributions and just started my new big side project{" "}
+                <small>(Private info 👀)</small>.
+              </p>
+              <p>
+                If you are intrested on any of my work checkout my{" "}
+                <a href="https://github.com/rodzy">GitHub</a>, I'm very active
+                on there and I got some public and very intresting projects to
+                check out or even contribute to them.
+              </p>
+            </>
+          )}
+          {long && (
+            <>
+              <p>Long whoooooooo</p>
+              <p>
+                As a side note I'm spending most of free time doing Open Source
+                contributions and just started my new big side project{" "}
+                <small>(Private info 👀)</small>.
+              </p>
+              <p>
+                If you are intrested on any of my work checkout my{" "}
+                <a href="https://github.com/rodzy">GitHub</a>, I'm very active
+                on there and I got some public and very intresting projects to
+                check out or even contribute to them.
+              </p>
+            </>
+          )}
+          {speaker && (
+            <>
+              <p>Boringggggg!!!!!!</p>
+              <p>
+                As a side note I'm spending most of free time doing Open Source
+                contributions and just started my new big side project{" "}
+                <small>(Private info 👀)</small>.
+              </p>
+              <p>
+                If you are intrested on any of my work checkout my{" "}
+                <a href="https://github.com/rodzy">GitHub</a>, I'm very active
+                on there and I got some public and very intresting projects to
+                check out or even contribute to them.
+              </p>
+            </>
+          )}
         </section>
       </Layout>
     </>

@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import ModeProvider from "../lib/modecontext";
 
 class MyDocument extends Document {
   render() {
