@@ -59,20 +59,43 @@
 
 .theheaderInsider{
   background-color: #fff;
-  border-bottom-width: 1px;
+  border-bottom-width: 0px;
   border-bottom-style: solid;
   border-color: #666;
   padding: 16px 0px;
   transition: background-color 0.5s ease;
 }
 
-.theheaderInsiderDark {
-  background-color: #1c1f24;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-color: #1976d2;
-  padding: 16px 0px;
-  transition: background-color 0.5s ease;
+.theheaderInsiderInsider {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0px auto;
+}
+
+.theheadercontentdiv{
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  text-align: left;
+  justify-content: flex-end;
+}
+
+.theheaderButton{
+  appearance: none;
+  padding: 0px 10px;
+  margin:0;
+  background-color: transparent;
+  border: 0px;
+  transition: color 300ms ease 0s;
+  outline: none;
+  cursor: pointer;
+  list-style-type: none;
+  flex: 1 1 auto;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 @media (max-width:700px){
