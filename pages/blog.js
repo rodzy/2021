@@ -26,7 +26,7 @@ export default function Blog({ allPostsData }) {
             patterns, tutorials and sometimes just my toughts about certain
             technologies.
           </p>
-          <h2>Check the latests posts down bellow</h2>
+          <h2 className={utilStyles.headingLg}>Latest posts</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
@@ -35,7 +35,7 @@ export default function Blog({ allPostsData }) {
                 </Link>
                 <br />
                 <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
+                  Published: <Date dateString={date} />
                 </small>
               </li>
             ))}

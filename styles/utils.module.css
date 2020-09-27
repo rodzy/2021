@@ -20,6 +20,78 @@
   margin: 1rem 0;
 }
 
+.headingLg::after, .headingXl::after {
+  content: "";
+  /* margin-left: 5.5rem; */
+  width: 100px;
+  height: 8px;
+  background: linear-gradient(
+    124deg,
+    #2b1de8,
+    #dd00f3,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  border-radius: 10rem;
+  background-size: 1700% 1700%;
+  display: block;
+  animation: coloring 27s ease infinite;
+  transition: background-color 1s;
+  padding-left: 2rem;
+}
+
+@-webkit-keyframes coloring {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+@-o-keyframes coloring {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+@-moz-keyframes coloring {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+@keyframes coloring {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
 .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
@@ -45,13 +117,23 @@
 
 .listItem {
   margin: 0 0 1.25rem;
+  border: 1px solid;
+  border-radius: 0.2rem;
+  padding: 2rem;
+  box-shadow: 5px 5px #000;
+  transition: box-shadow 0.2s;
+}
+
+.listItem:hover{
+  cursor: pointer;
+  box-shadow: 5px 5px #B39DDB;
 }
 
 .lightText {
   color: #666;
 }
 
-.socialsContainer{
+.socialsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -59,7 +141,7 @@
   padding: 1.2rem;
 }
 
-.buttonsContainer{
+.buttonsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -67,7 +149,7 @@
   padding: 1rem;
 }
 
-.microbuttons{
+.microbuttons {
   appearance: none;
   font-size: 1rem;
   font-weight: 600;
@@ -80,4 +162,10 @@
   border-radius: 5rem;
   outline: none;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .headingLg::after {
+    animation: coloring 15s ease infinite;
+  }
 }

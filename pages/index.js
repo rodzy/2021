@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import Layout, { siteTitle } from "../components/layout";
+import useModeContext from "../context/ModeContext";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 
