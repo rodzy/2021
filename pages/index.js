@@ -7,8 +7,8 @@ import utilStyles from "../styles/utils.module.css";
 
 const InitialState = {
   intro: false,
-  stack: true,
-  more: false,
+  stack: false,
+  more: true,
 };
 
 export default function Home() {
@@ -47,8 +47,8 @@ export default function Home() {
           <div className={utilStyles.buttonsContainer}>
             <button
               style={{
-                borderColor: intro ? "#673ab7" : "#adadad",
-                color: intro ? "#673ab7" : "#8d8d8d",
+                borderColor: intro ? "#EC407A" : "#adadad",
+                color: intro ? "#880E4F" : "#8d8d8d",
               }}
               className={utilStyles.microbuttons}
               onClick={() => dispatch({ type: "Intro" })}
@@ -57,8 +57,8 @@ export default function Home() {
             </button>
             <button
               style={{
-                borderColor: stack ? "#2196f3" : "#adadad",
-                color: stack ? "#2196f3" : "#8d8d8d",
+                borderColor: stack ? "#EC407A" : "#adadad",
+                color: stack ? "#880E4F" : "#8d8d8d",
               }}
               className={utilStyles.microbuttons}
               onClick={() => dispatch({ type: "Stack" })}
@@ -80,7 +80,7 @@ export default function Home() {
             <>
               <p>
                 Hey there! I'm a self taught modern web developer, currently
-                doing freelance work and focusing on getting a gig at a great
+                doing open source work and focusing on getting a gig at a great
                 company that highly values professionals.
               </p>
               <p>
@@ -155,10 +155,10 @@ export default function Home() {
               <p>
                 So, yeah that's my core tech stack currently I've been doing a
                 lot of SSG/SSR and overall having a good time with it. Of course
-                there are a lot of other tools/libraries that I use for
-                utilities, data fetching, quering information, caching for those
-                here are some honorable mentions:
+                there are a lot of other tools/libraries that I use for data
+                fetching, quering information, JavaScript utilities & more...
               </p>
+              <p>Here are some honorable mentions of tools that I use:</p>
               <ul>
                 <li>React Query</li>
                 <li>React SWR</li>
@@ -167,8 +167,8 @@ export default function Home() {
                 <li>Lodash</li>
               </ul>
               <p>
-                There's a lot more to cover, if you're still intrested of
-                knowing more in depth of why I use these tech stack, Check my{" "}
+                There's a lot more to cover, if you're still intrested on
+                knowing more in depth of why I use this tech stack, Check my{" "}
                 <Link href="/posts/faq">
                   <a>FAQ</a>
                 </Link>
@@ -177,17 +177,26 @@ export default function Home() {
           )}
           {more && (
             <>
-              <p>Boringggggg!!!!!!</p>
+              <p>
+                So, who exactly am I? I'm an enthusiastic developer driven to
+                deliver high quality software. I'm someone with a great eye for
+                design and accesibility to archive a pleasant experiences for
+                the users.
+              </p>
               <p>
                 As a side note I'm spending most of free time doing Open Source
-                contributions and just started my new big side project{" "}
+                contributions and working on my new big side project{" "}
                 <small>(Private info 👀)</small>.
               </p>
               <p>
-                If you are intrested on any of my work checkout my{" "}
-                <a href="https://github.com/rodzy">GitHub</a>, I'm very active
-                on there and I got some public and very intresting projects to
-                check out or even contribute to them.
+                Outside of coding, I enjoy going to art galleries 🎨 & museums
+                🗿. I like cooking 🍱 and sometimes I do play basketball 🏀. I
+                also run a blog where I document some pretty cool things about
+                tech, If you are intrested check{" "}
+                <Link href="/blog">
+                  <a>Rodzy's Blog</a>
+                </Link>
+                .
               </p>
             </>
           )}
