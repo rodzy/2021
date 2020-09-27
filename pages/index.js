@@ -1,15 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import Layout, { siteTitle } from "../components/layout";
-import useModeContext from "../context/ModeContext";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 
 const InitialState = {
-  intro: false,
+  intro: true,
   stack: false,
-  more: true,
+  more: false,
 };
 
 export default function Home() {
@@ -85,15 +84,31 @@ export default function Home() {
                 company that highly values professionals.
               </p>
               <p>
-                As a side note I'm spending most of free time doing Open Source
-                contributions and just started my new big side project{" "}
-                <small>(Private info 👀)</small>.
+                As of today my experience is based on help others create
+                web ecosystems and bring the whole community aspect, some of the
+                most relevant projects I've contributed to are: Nuxt.js{" "}
+                <small>
+                  <i>(The Vue.js framework)</i>
+                </small>
+                , HospitalRun Frontend{" "}
+                <small>
+                  <i>
+                    (Over <span>24K</span> stars on GitHub)
+                  </i>
+                </small>
+                .
               </p>
               <p>
-                If you are intrested on any of my work checkout my{" "}
+                If you're intrested on any of my work checkout my{" "}
                 <a href="https://github.com/rodzy">GitHub</a>, I'm very active
                 on there and I got some public and very intresting projects to
                 check out or even contribute to them.
+              </p>
+              <p>
+                Wanna work together? Send me an{" "}
+                <a href="mailto:irod2899@gmail.com">email</a> or send me a
+                direct message{" "}
+                <a href="https://twitter.com/rodzyrm">@rodzyrm</a> on twitter
               </p>
             </>
           )}
