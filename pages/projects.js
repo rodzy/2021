@@ -4,6 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import { getAllProjectsData } from "../lib/projects";
 import Link from "next/link";
 import Date from "../components/date";
+import effectStyles from '../styles/effect.module.css'
 
 export default function Projects({ allProjectsData }) {
   return (
@@ -16,19 +17,29 @@ export default function Projects({ allProjectsData }) {
           <h1 className={utilStyles.headingLg}>My projects</h1>
           <p>Take a look at my projects 🎈</p>
           <ul className={utilStyles.list}>
-            {allProjectsData.map(({ id, date, title, description }) => (
-              <Link href="/posts/[id]" as={`/posts/${id}`} key={id}>
-                <li className={utilStyles.listItem}>
+            {allProjectsData.map(
+              ({ id, title, description, githubURL, url, npmURL }) => (
+                <li className={utilStyles.listItem} key={id}>
                   <p>
                     <strong>{title}:</strong>
                   </p>
                   <p> {description}</p>
-                  <small className={utilStyles.lightText}>
-                    Published: <Date dateString={date} />
-                  </small>
+                  <a href={githubURL} target="blank">
+                    GitHub
+                  </a>
+                  {url && (
+                    <a href={url} target="blank">
+                      Website
+                    </a>
+                  )}
+                  {npmURL && (
+                    <a href={npmURL} target="blank">
+                      npm
+                    </a>
+                  )}
                 </li>
-              </Link>
-            ))}
+              )
+            )}
           </ul>
         </section>
       </Layout>

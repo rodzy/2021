@@ -159,7 +159,9 @@
   padding-right: 1.2rem;
   margin: 0.2rem;
   border: 3px solid;
-  border-radius: 5rem;
+  border-bottom-left-radius: .8rem;
+  border-top-right-radius: .8rem;
+  border-top-left-radius: .5rem;
   outline: none;
   cursor: pointer;
 }
