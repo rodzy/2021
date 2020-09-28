@@ -20,7 +20,7 @@
   margin: 1rem 0;
 }
 
-.headingLg::after, .headingXl::after {
+.headingLg::after, .headingXl::before {
   content: "";
   /* margin-left: 5.5rem; */
   width: 100px;

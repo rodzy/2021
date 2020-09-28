@@ -26,7 +26,7 @@ export default function Blog({ allPostsData }) {
             patterns, tutorials and sometimes just my toughts about certain
             technologies.
           </p>
-          <h2 className={utilStyles.headingLg}>Latest posts</h2>
+          <h2 className={utilStyles.heading}>Latest posts</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
