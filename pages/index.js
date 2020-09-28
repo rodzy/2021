@@ -196,7 +196,7 @@ export default function Home() {
               <p>
                 So, who exactly am I? I'm an enthusiastic developer driven to
                 deliver high quality software. I'm someone with a great eye for
-                design and accesibility to archive a pleasant experiences for
+                design and accesibility to archive a pleasant experience for
                 the users.
               </p>
               <p>

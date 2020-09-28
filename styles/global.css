@@ -8,6 +8,25 @@ body {
   font-size: 18px;
 }
 
+::-moz-selection {
+  color: #ffffff;
+  background: #000;
+}
+::selection {
+  color: #ffffff;
+  background: #000;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background: grey;
+}
+body::-webkit-scrollbar-thumb {
+  background: black;
+}
+
 * {
   box-sizing: border-box;
   background-color: #ffffff;
