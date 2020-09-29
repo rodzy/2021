@@ -32,7 +32,7 @@ export default function Home() {
               GitHub
             </a>
             <a href="https://ko-fi/rodzy" target="blank">
-              Ko-fi
+              ko-fi
             </a>
             <a href="#!" target="blank">
               LinkedIn

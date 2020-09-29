@@ -33,33 +33,31 @@ body::-webkit-scrollbar-thumb {
   color: #000;
 }
 
-a{
-  color: #0070f3;
-  text-decoration: none;
+a {
+  color: #000;
+  text-decoration: underline;
 }
 
-
-a:hover {
+a:hover,
+a:focus {
   color: #0070f3;
   overflow: hidden;
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
   background: linear-gradient(
-    124deg,
-    #2b1de8,
-    #dd00f3,
-    #e8b71d,
-    #e3e81d,
-    #1de840,
-    #2b1de8,
-    #dd00f3,
-    #dd00f3
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
   background-position: 100%;
-  transition: background-position 275ms ease;
-  text-decoration: none;
+  transition: 1s ease;
 }
 
 /* a:hover {
