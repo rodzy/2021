@@ -210,7 +210,7 @@
     border-top-left-radius: 0.5rem;
     outline: none;
     cursor: pointer;
-    color: #ec407a;
+    border-color: #ec407a;
     overflow: hidden;
     background: -moz-linear-gradient(
         90deg,

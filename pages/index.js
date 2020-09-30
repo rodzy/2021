@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import Layout, { siteTitle } from "../components/layout";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
@@ -15,6 +15,9 @@ export default function Home() {
     const [state, dispatch] = useReducer(MainReducer, InitialState);
     const { intro, stack, more } = state;
 
+    useEffect(() => {
+        console.log("Thank you for visiting my site 📣🐢");
+    }, []);
     return (
         <>
             <Head>
