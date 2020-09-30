@@ -9,6 +9,7 @@ export default function Post({ postData }) {
         <Layout>
             <Head>
                 <title>{postData.title}</title>
+                <meta name="description" content={postData.description}/>
             </Head>
             <article>
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>
