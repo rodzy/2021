@@ -46,38 +46,38 @@ export default function Home() {
                     </div>
                     <div className={utilStyles.buttonsContainer}>
                         <button
-                            style={{
-                                borderColor: intro ? "#EC407A" : "#adadad",
-                                color: intro ? "#880E4F" : "#8d8d8d",
-                            }}
-                            className={utilStyles.microbuttons}
+                            className={
+                                intro
+                                    ? utilStyles.microbuttonsSelected
+                                    : utilStyles.microbuttons
+                            }
                             onClick={() => dispatch({ type: "Intro" })}
                         >
                             About me
                         </button>
                         <button
-                            style={{
-                                borderColor: stack ? "#EC407A" : "#adadad",
-                                color: stack ? "#880E4F" : "#8d8d8d",
-                            }}
-                            className={utilStyles.microbuttons}
+                            className={
+                                stack
+                                    ? utilStyles.microbuttonsSelected
+                                    : utilStyles.microbuttons
+                            }
                             onClick={() => dispatch({ type: "Stack" })}
                         >
                             Tech stack
                         </button>
                         <button
-                            style={{
-                                borderColor: more ? "#EC407A" : "#adadad",
-                                color: more ? "#880E4F" : "#8d8d8d",
-                            }}
-                            className={utilStyles.microbuttons}
+                            className={
+                                more
+                                    ? utilStyles.microbuttonsSelected
+                                    : utilStyles.microbuttons
+                            }
                             onClick={() => dispatch({ type: "More" })}
                         >
                             More about me
                         </button>
                     </div>
                     {intro && (
-                        <>
+                        <div className={utilStyles.textContainer}>
                             <p>
                                 Hey there! I'm a self taught modern web
                                 developer, currently doing open source work and
@@ -116,10 +116,10 @@ export default function Home() {
                                 </a>{" "}
                                 on twitter
                             </p>
-                        </>
+                        </div>
                     )}
                     {stack && (
-                        <>
+                        <div className={utilStyles.textContainer}>
                             <p>
                                 Well hello there! I know you're curious about
                                 what my tech stack is and what tools I'm using,
@@ -219,10 +219,10 @@ export default function Home() {
                                     <a>FAQ</a>
                                 </Link>
                             </p>
-                        </>
+                        </div>
                     )}
                     {more && (
-                        <>
+                        <div className={utilStyles.textContainer}>
                             <p>
                                 So, who exactly am I? I'm an enthusiastic
                                 developer driven to deliver high quality
@@ -247,7 +247,7 @@ export default function Home() {
                                 </Link>
                                 .
                             </p>
-                        </>
+                        </div>
                     )}
                 </section>
             </Layout>
