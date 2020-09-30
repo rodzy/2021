@@ -60,11 +60,6 @@ a:focus {
   transition: 1s ease;
 }
 
-/* a:hover {
-  background-position: 0 100%;
-  text-decoration: underline;
-} */
-
 img {
   max-width: 100%;
   display: block;

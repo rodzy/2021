@@ -2,9 +2,6 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getAllProjectsData } from "../lib/projects";
-import Link from "next/link";
-import Date from "../components/date";
-import effectStyles from '../styles/effect.module.css'
 
 export default function Projects({ allProjectsData }) {
   return (

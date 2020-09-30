@@ -22,7 +22,6 @@
 
 .headingLg::after, .headingXl::before {
   content: "";
-  /* margin-left: 5.5rem; */
   width: 100px;
   height: 8px;
   background: linear-gradient(
