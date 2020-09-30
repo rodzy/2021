@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "personal-blog",
+  "description":"My personal page, made with markdown and next.js",
   "version": "0.1.0",
   "private": true,
   "scripts": {
