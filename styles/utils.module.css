@@ -123,9 +123,34 @@
   transition: box-shadow 0.2s;
 }
 
+.listItem a{
+    text-decoration: none;
+}
+
 .listItem:hover{
   cursor: pointer;
   box-shadow: 5px 5px #B39DDB;
+}
+
+.listItem:hover a{
+    color: #0070f3;
+  overflow: hidden;
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: 1s ease;
 }
 
 .lightText {

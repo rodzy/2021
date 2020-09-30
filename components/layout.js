@@ -6,7 +6,7 @@ import TheHeader from "./TheHeader";
 
 const name = "Isaac Rodríguez";
 const title = "Software Engineer in Costa Rica";
-export const siteTitle = `Rodzy`;
+export const siteTitle = `Isaac Rodríguez`;
 
 export default function Layout({ children, home, blog }) {
   return (

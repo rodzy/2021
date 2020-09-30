@@ -5,22 +5,22 @@ export default function MainReducer(state, action) {
                 ...state,
                 intro: true,
                 stack: false,
-                more:false,
-            }
+                more: false,
+            };
         case "Stack":
             return {
                 ...state,
                 intro: false,
                 stack: true,
-                more:false,
-            }
+                more: false,
+            };
         case "More":
             return {
                 ...state,
                 intro: false,
                 stack: false,
-                more:true,
-            }
+                more: true,
+            };
         default:
             break;
     }
