@@ -1,8 +1,13 @@
 {
   "name": "personal-blog",
-  "description":"My personal page, made with markdown and next.js",
+  "description": "My personal page, made with markdown and next.js",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
+  "author": {
+      "name": "Isaac Rodríguez",
+      "url": "https://github.com/rodzy"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
