@@ -15,9 +15,18 @@ export default function Home() {
     const [state, dispatch] = useReducer(MainReducer, InitialState);
     const { intro, stack, more } = state;
 
+    // const { mode, setMode } = useModeContext();
+
+    // const [modex, setModex] = useLocalStorage("mode", mode);
+
+    // useEffect(() => {
+    //     setMode(modex);
+    // }, [modex]);
+
     useEffect(() => {
         console.log("Thank you for visiting my site 📣🐢");
     }, []);
+
     return (
         <>
             <Head>

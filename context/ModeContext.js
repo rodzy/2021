@@ -1,21 +1,17 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 export const ModeContext = React.createContext();
 
 export const ModeProvider = ({ children }) => {
-    const [mode, setMode] = useLocalStorage("mode", false);
+    const [mode, setMode] = useLocalStorage("mode", userColorScheme());
 
-    useEffect(() => {
-        function userColorScheme() {
-            if (typeof window !== "undefined") {
-                if (!window.matchMedia) return;
-                return window.matchMedia("(prefers-color-scheme:dark)").matches;
-            }
+    function userColorScheme() {
+        if (typeof window !== "undefined") {
+            if (!window.matchMedia) return;
+            return window.matchMedia("(prefers-color-scheme:dark)").matches;
         }
-        const initialValue = userColorScheme();
-        setMode(initialValue);
-    }, []);
+    }
 
     return (
         <ModeContext.Provider value={{ mode, setMode }}>
