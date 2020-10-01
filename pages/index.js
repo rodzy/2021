@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useReducer } from "react";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle,title } from "../components/layout";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 
@@ -33,7 +33,7 @@ export default function Home() {
                 <title>{siteTitle}</title>
                 <meta
                     name="description"
-                    content="Software Engineer in Costa Rica."
+                    content={title}
                 ></meta>
             </Head>
             <Layout home>
@@ -46,7 +46,7 @@ export default function Home() {
                         <a href="https://ko-fi/rodzy" target="blank">
                             ko-fi
                         </a>
-                        <a href="#!" target="blank">
+                        <a href="https://www.linkedin.com/in/isaac-rodriguez-56bb8a127/" target="blank">
                             LinkedIn
                         </a>
                         <a href="https://npmjs.com/~rodzy" target="blank">

@@ -1,26 +1,15 @@
-import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import TheHeader from "./TheHeader";
 
 const name = "Isaac Rodríguez";
-const title = "Software Engineer in Costa Rica";
+export const title = "Software Engineer in Costa Rica";
 export const siteTitle = `Isaac Rodríguez`;
 
 export default function Layout({ children, home, blog }) {
   return (
     <>
-      <Head>
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
       <TheHeader />
       <div className={styles.insiderContainer}>
         <div className={styles.container}>
