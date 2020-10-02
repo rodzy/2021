@@ -4,6 +4,7 @@ import { useEffect, useReducer } from "react";
 import Layout, { siteTitle, title } from "../components/layout";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
+import { motion } from "framer-motion";
 
 const InitialState = {
     intro: true,
@@ -14,14 +15,6 @@ const InitialState = {
 export default function Home() {
     const [state, dispatch] = useReducer(MainReducer, InitialState);
     const { intro, stack, more } = state;
-
-    // const { mode, setMode } = useModeContext();
-
-    // const [modex, setModex] = useLocalStorage("mode", mode);
-
-    // useEffect(() => {
-    //     setMode(modex);
-    // }, [modex]);
 
     useEffect(() => {
         console.log("Thank you for visiting my site 📣🐢");
@@ -68,8 +61,10 @@ export default function Home() {
                             Twitter
                         </a>
                     </div>
-                    <div className={utilStyles.buttonsContainer}>
-                        <button
+                    <motion.div className={utilStyles.buttonsContainer}>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                             className={
                                 intro
                                     ? utilStyles.microbuttonsSelected
@@ -78,8 +73,10 @@ export default function Home() {
                             onClick={() => dispatch({ type: "Intro" })}
                         >
                             About me
-                        </button>
-                        <button
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                             className={
                                 stack
                                     ? utilStyles.microbuttonsSelected
@@ -88,8 +85,10 @@ export default function Home() {
                             onClick={() => dispatch({ type: "Stack" })}
                         >
                             Tech stack
-                        </button>
-                        <button
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                             className={
                                 more
                                     ? utilStyles.microbuttonsSelected
@@ -98,8 +97,8 @@ export default function Home() {
                             onClick={() => dispatch({ type: "More" })}
                         >
                             More about me
-                        </button>
-                    </div>
+                        </motion.button>
+                    </motion.div>
                     {intro && (
                         <div className={utilStyles.textContainer}>
                             <p>
