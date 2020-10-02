@@ -5,7 +5,7 @@ import "../styles/global.css";
 export default function App({ Component, pageProps, router }) {
     return (
         <ModeProvider>
-            <AnimatePresence initial={false} exitBeforeEnter={true}>
+            <AnimatePresence exitBeforeEnter={true}>
                 <motion.div
                     key={router.route}
                     initial="pageInitial"

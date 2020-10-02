@@ -12,6 +12,29 @@ const InitialState = {
     more: false,
 };
 
+const container = {
+    hidden: {
+        opacity:1,scale:0
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          delay: 0.3,
+          when: "beforeChildren",
+          staggerChildren: 0.1
+        }
+      }
+}
+
+const buttons = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+}
+
 export default function Home() {
     const [state, dispatch] = useReducer(MainReducer, InitialState);
     const { intro, stack, more } = state;
@@ -61,10 +84,11 @@ export default function Home() {
                             Twitter
                         </a>
                     </div>
-                    <motion.div className={utilStyles.buttonsContainer}>
+                    <motion.div className={utilStyles.buttonsContainer} variants={container} initial="hidden" animate="visible">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
+                            variants={buttons}
                             className={
                                 intro
                                     ? utilStyles.microbuttonsSelected
@@ -77,6 +101,7 @@ export default function Home() {
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
+                            variants={buttons}
                             className={
                                 stack
                                     ? utilStyles.microbuttonsSelected
@@ -89,6 +114,7 @@ export default function Home() {
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
+                            variants={buttons}
                             className={
                                 more
                                     ? utilStyles.microbuttonsSelected

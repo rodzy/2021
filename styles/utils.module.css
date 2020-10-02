@@ -210,9 +210,10 @@
     border-top-left-radius: 0.5rem;
     outline: none;
     cursor: pointer;
-    border-color: #ec407a;
+    border-color: #000;
+    color: #000;
     overflow: hidden;
-    background: -moz-linear-gradient(
+    /* background: -moz-linear-gradient(
         90deg,
         rgba(63, 94, 251, 1) 0%,
         rgba(252, 70, 107, 1) 100%
@@ -221,12 +222,13 @@
         90deg,
         rgba(63, 94, 251, 1) 0%,
         rgba(252, 70, 107, 1) 100%
-    );
+    ); */
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
     background-size: 200% 100%;
     background-position: 100%;
+    box-shadow: 1.5px 4px #000;
 }
 
 .textContainer{
