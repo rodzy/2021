@@ -5,17 +5,22 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 
+const pageTitle = "Rodzy's blog";
+const pageDescription =
+    "On this blog you will find all topics related to web development, tutorials and sometimes just my toughts about certain technologies.";
+
 export default function Blog({ allPostsData }) {
     return (
         <>
             <Head>
-                <title>Rodzy's blog</title>
-                <meta
-                    name="description"
-                    content="On this blog you will find all topics related to web development, modern applications architectural
-            patterns, tutorials and sometimes just my toughts about certain
-            technologies."
-                ></meta>
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription}></meta>
+                {/* Twitter tags */}
+                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:description" content={pageDescription} />
+                {/*Open graph tags */}
+                <meta name="og:title" content={pageTitle} />
+                <meta name="og:description" content={pageDescription} />
             </Head>
             <Layout blog>
                 <section

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useReducer } from "react";
-import Layout, { siteTitle,title } from "../components/layout";
+import Layout, { siteTitle, title } from "../components/layout";
 import MainReducer from "../hooks/mainReducer";
 import utilStyles from "../styles/utils.module.css";
 
@@ -31,10 +31,19 @@ export default function Home() {
         <>
             <Head>
                 <title>{siteTitle}</title>
+                <meta name="description" content={title}></meta>
+                {/* Twitter tags */}
+                <meta name="twitter:title" content={siteTitle} />
                 <meta
-                    name="description"
-                    content={title}
-                ></meta>
+                    name="twitter:description"
+                    content={siteTitle + `, ` + title}
+                />
+                {/*Open graph tags */}
+                <meta name="og:title" content={siteTitle} />
+                <meta
+                    name="og:description"
+                    content={siteTitle + `, ` + title}
+                />
             </Head>
             <Layout home>
                 <section className={utilStyles.headingMd}>
@@ -46,7 +55,10 @@ export default function Home() {
                         <a href="https://ko-fi/rodzy" target="blank">
                             ko-fi
                         </a>
-                        <a href="https://www.linkedin.com/in/isaac-rodriguez-56bb8a127/" target="blank">
+                        <a
+                            href="https://www.linkedin.com/in/isaac-rodriguez-56bb8a127/"
+                            target="blank"
+                        >
                             LinkedIn
                         </a>
                         <a href="https://npmjs.com/~rodzy" target="blank">

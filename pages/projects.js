@@ -3,11 +3,21 @@ import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getAllProjectsData } from "../lib/projects";
 
+const pageTitle = "My Projects";
+const pageDescription = "My latest projects from GitHub";
+
 export default function Projects({ allProjectsData }) {
     return (
         <>
             <Head>
-                <title>My projects</title>
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription}></meta>
+                {/* Twitter tags */}
+                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:description" content={pageDescription} />
+                {/*Open graph tags */}
+                <meta name="og:title" content={pageTitle} />
+                <meta name="og:description" content={pageDescription} />
             </Head>
             <Layout blog>
                 <section
