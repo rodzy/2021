@@ -71,3 +71,11 @@ export async function getStaticProps() {
         },
     };
 }
+
+async function getInitialProps() {
+    return {
+        props: {
+            
+        }
+    }
+}

@@ -1,10 +1,13 @@
-import { ModeProvider } from "../context/ModeContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { ReactQueryCacheProvider, QueryCache } from "react-query";
+import { Hydrate } from "react-query/hydration";
 import "../styles/global.css";
+
+const queryCache = new QueryCache();
 
 export default function App({ Component, pageProps, router }) {
     return (
-        <ModeProvider>
+        <ReactQueryCacheProvider queryCache={queryCache}>
             <AnimatePresence exitBeforeEnter={true}>
                 <motion.div
                     key={router.route}
@@ -23,9 +26,11 @@ export default function App({ Component, pageProps, router }) {
                         },
                     }}
                 >
-                    <Component {...pageProps} />
+                    <Hydrate state={pageProps.dehydratedState}>
+                        <Component {...pageProps} />
+                    </Hydrate>
                 </motion.div>
             </AnimatePresence>
-        </ModeProvider>
+        </ReactQueryCacheProvider>
     );
 }
