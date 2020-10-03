@@ -20,9 +20,9 @@
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-query": "^2.23.1",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.1"
+    "remark-html": "^11.0.1",
+    "swr": "^0.3.5"
   },
   "devDependencies": {
     "eslint": "^7.10.0",
