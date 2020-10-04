@@ -271,7 +271,7 @@ export default function Home() {
                         </div>
                     )}
                     {more && (
-                        <div className={utilStyles.textContainer}>
+                        <div className={utilStyles.textContainerMore}>
                             <p>
                                 So, who exactly am I? I'm an enthusiastic
                                 developer driven to deliver high quality
